@@ -14,152 +14,224 @@
       <!-- Main Header -->
       <h1 class="display-4">Survey Says...</h1>
       <div class="form-group row">
-        <h2 class="col-sm-12 col-form-label">Upload a picture and answer the questions. C'mon.</h2>
+        <h2 class="col-sm-12 col-form-label">What's your name? Upload a picture and answer the questions. C'mon.</h2>
       </div>
       <!-- Line Break -->
       <hr class="my-4">
-      <!-- File upload -->
+      <!-- User enters name here -->
       <div class="form-group">
-        <label for="exampleInputFile">Show 'em your mugshot.</label>
-        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-        <small id="fileHelp" class="form-text text-muted">Try to keep it PG, okay?</small>
+        <label class="col-form-label col-form-label-lg" for="inputLarge">Your name, please.</label>
+        <input class="form-control form-control-lg" type="text" placeholder="Name" id="friendName">
+      </div>
+      <!-- User enters image address here -->
+      <div class="form-group">
+        <label class="col-form-label col-form-label-lg" for="inputLarge">Show 'em your mugshot.</label>
+        <input class="form-control form-control-lg" type="text" placeholder="Copy an image URL and paste it here" id="friendPhoto">
       </div>
       <!-- Line Break -->
       <hr class="my-4">
       <!-- Question #1 -->
       <div class="form-group">
-        <label for="exampleSelect1">What is your name?</label>
-        <select class="form-control" id="exampleSelect1">
+        <label for="exampleSelect1">Do you have a nickname?</label>
+        <select class="form-control" id="question1">
           <option>-- Choose --</option>
-          <option>Bichael</option>
-          <option>Lazy Suzan</option>
-          <option>Admiral Tuff Taffy</option>
-          <option>Meme Master</option>
-          <option>Re-animated Jerry Garcia</option>
+          <option value=1>Bichael</option>
+          <option value=2>Lazy Suzan</option>
+          <option value=3>Admiral Tuff Taffy</option>
+          <option value=4>Meme Master</option>
+          <option value=5>Cherry Garcia</option>
         </select>
       </div>
       <!-- Question #2 -->
       <div class="form-group">
         <label for="exampleSelect1">What is your quest?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question2">
           <option>-- Choose --</option>
-          <option>I want to be the very best, like no one ever was!</option>
-          <option>I'm looking for the Holy Grail.</option>
-          <option>I want to make money as a web developer.</option>
-          <option>I want to always remember what I ate for breakfast a week ago.</option>
-          <option>I'm doing all the side quests before I do the main quest.</option>
+          <option value=1>I want to be the very best, like no one ever was!</option>
+          <option value=2>I'm looking for the Holy Grail.</option>
+          <option value=3>I want to make money as a web developer.</option>
+          <option value=4>I want to always remember what I ate for breakfast a week ago.</option>
+          <option value=5>I'm doing all the side quests before I do the main quest.</option>
         </select>
       </div>
       <!-- Question #3 -->
       <div class="form-group">
         <label for="exampleSelect1">What is your favorite color?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question3">
           <option>-- Choose --</option>
-          <option>Banana</option>
-          <option>Ocean</option>
-          <option>Jump rope</option>
-          <option>Hand-me-downs</option>
-          <option>Computer</option>
+          <option value=1>Banana</option>
+          <option value=2>Ocean</option>
+          <option value=3>Jump rope</option>
+          <option value=4>Hand-me-downs</option>
+          <option value=5>Computer</option>
         </select>
       </div>
       <!-- Question #4 -->
       <div class="form-group">
         <label for="exampleSelect1">Who are you? How did you get in my house?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question4">
           <option>-- Choose --</option>
-          <option>I'm the enchanting wizard of rhythm. I came here to tell you about the rhythms of the universe.</option>
-          <option>I am your father!</option>
-          <option>Boo! I'm a ghost!</option>
-          <option>But, like, who are we really, man?</option>
-          <option>This is getting tedious.</option>
+          <option value=1>I'm the enchanting wizard of rhythm. I came here to tell you about the rhythms of the universe.</option>
+          <option value=2>I am your father!</option>
+          <option value=3>Boo! I'm a ghost!</option>
+          <option value=4>But, like, who are we really, man?</option>
+          <option value=5>This is getting tedious.</option>
         </select>
       </div>
       <!-- Question #5 -->
       <div class="form-group">
         <label for="exampleSelect1">Why are my socks so wet?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question5">
           <option>-- Choose --</option>
-          <option>You don't want to know.</option>
-          <option>Maybe don't splish-splosh in puddles and your socks won't be so wet.</option>
-          <option>At least you have socks.</option>
-          <option>The dryer is broken. The guy is coming Wednesday. Do you have to work or can you be here?</option>
-          <option>What have you got against wet socks, huh? You some kind of wiseguy, huh?</option>
+          <option value=1>You don't want to know.</option>
+          <option value=2>Maybe don't splish-splosh in puddles and your socks won't be so wet.</option>
+          <option value=3>At least you have socks.</option>
+          <option value=4>The dryer is broken. The guy is coming Wednesday. Do you have to work or can you be here?</option>
+          <option value=5>What have you got against wet socks, huh? You some kind of wiseguy, huh?</option>
         </select>
       </div>
       <!-- Question #6 -->
       <div class="form-group">
         <label for="exampleSelect1">How did I get here?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question6">
           <option>-- Choose --</option>
-          <option>How DID she get there?</option>
-          <option>You blacked-out last night, so we took you home. Have some french toast.</option>
-          <option>Billions of years of evolution.</option>
-          <option>Took an Uber.</option>
-          <option>Who cares.</option>
+          <option value=1>How DID she get there?</option>
+          <option value=2>You blacked-out last night, so we took you home. Have some french toast.</option>
+          <option value=3>Billions of years of evolution.</option>
+          <option value=4>Took an Uber.</option>
+          <option value=5>Who cares.</option>
         </select>
       </div>
       <!-- Question #7 -->
       <div class="form-group">
         <label for="exampleSelect1">Is this the real life? Or is this just fantasy?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question7">
           <option>-- Choose --</option>
-          <option>Real life</option>
-          <option>Fantasy</option>
-          <option>Tomato</option>
-          <option>Tomato</option>
-          <option>Potato</option>
+          <option value=1>Real life</option>
+          <option value=2>Fantasy</option>
+          <option value=3>Tomato</option>
+          <option value=4>Tomato</option>
+          <option value=5>Potato</option>
         </select>
       </div>
       <!-- Question #8 -->
       <div class="form-group">
         <label for="exampleSelect1">Would you describe yourself as a foolish samarai warrior wielding a magic sword?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question8">
           <option>-- Choose --</option>
-          <option>Yes.</option>
-          <option>No.</option>
-          <option>Maybe...</option>
-          <option>I'd rather not say.</option>
-          <option>AKUUUUUUUUUUUUU!!!!!!!!!!!!!!!!!</option>
+          <option value=1>Yes.</option>
+          <option value=2>No.</option>
+          <option value=3>Maybe...</option>
+          <option value=4>I'd rather not say.</option>
+          <option value=5>AKUUUUUUUUUUUUU!!!!!!!!!!!!!!!!!</option>
         </select>
       </div>
       <!-- Question #9 -->
       <div class="form-group">
         <label for="exampleSelect1">Can you help me get to the nearest Bojangles?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question9">
           <option>-- Choose --</option>
-          <option>I love Bojangles!</option>
-          <option>I hate Bojangles!</option>
-          <option>I'm indifferent to Bojangles.</option>
-          <option>I can tell you how to get to Burger King.</option>
-          <option>Ask Bob Dylan.</option>
+          <option value=1>I love Bojangles!</option>
+          <option value=2>I hate Bojangles!</option>
+          <option value=3>I'm indifferent to Bojangles.</option>
+          <option value=4>I can tell you how to get to Burger King.</option>
+          <option value=5>Ask Bob Dylan.</option>
         </select>
       </div>
       <!-- Question #10 -->
       <div class="form-group">
       <label for="exampleSelect1">Do you like taking surveys?</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="question10">
           <option>-- Choose --</option>
-          <option>More than anything in the world, Ron!</option>
-          <option>I do not like them, Sam-I-am.</option>
-          <option>How is any of this going to help me find a friend?</option>
-          <option>I like to survey the bar for hot broads, bro.</option>
-          <option>I actually work for the Census Bureau, funny you should ask.</option>
+          <option value=1>More than anything in the world, Ron!</option>
+          <option value=2>I do not like them, Sam-I-am.</option>
+          <option value=3>How is any of this going to help me find a friend?</option>
+          <option value=4>I like to survey the bar for hot broads, bro.</option>
+          <option value=5>I actually work for the Census Bureau, funny you should ask.</option>
         </select>
       </div>
+      <!-- Line Break -->
+      <hr class="my-4">
       <!-- Submit Button -->
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="submitSurvey" data-toggle="modal" data-target="#modal">Submit</button>
     </fieldset>
   </form>
+  <!-- Modal displaying match -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Match Made in Heaven</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="matchPhoto" class="materialboxed" height="300" width="300" src="">
+          <div class="matchName">Name here</div>
+          <hr class="my-4">
+          <div>Boom! Got ya a new bestie! Ya'll have fun, and come back any time you need a new friend.</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="sweet" data-dismiss="modal">Sweet! Thanks!</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- jQuery CDN is referenced here -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- Javascript is run here -->
+  <script type="text/javascript">
+  
+    $("#submitSurvey").on("click", function(event) {
+      event.preventDefault();
+
+      if ($("#friendName").val().trim() === "") {
+        swal("Don't forget your name!");
+        return false;
+      } else if ($("#friendPhoto").val().trim() === "") {
+        swal("You kinda need a photo, too!");
+        return false;
+      }
+      var newFriend = {
+        name: $("#friendName").val().trim(),
+        photo: $("#friendPhoto").val().trim(),
+        scores: []
+      };
+
+      for (var i = 1; i < 11; i++) {
+        var score = $("#question" + i + "").val().trim();
+        var numScore = Number(score);
+        if (isNaN(numScore)) {
+          swal("Be sure to answer all the questions, okay?");
+          return false;
+         }
+        newFriend.scores.push(numScore);
+      }
+     
+      console.log(newFriend);
+
+      $.post("/api/friends", newFriend, function(data) {
+        if (data) {
+          $("#modal").show();
+          $("#matchPhoto").attr("src", data.photo);
+          $(".matchName").html(data.name);
+        }
+      });
+
+    });
+
+    $("#sweet").on("click", function() {
+      location.reload();
+    });
+  
+  </script>
+
 </body>
 </html>
