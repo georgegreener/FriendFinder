@@ -81,7 +81,7 @@
    background-color: #fff;
    background-image: url('/images/imaginaryfriends.jpg');
    background-repeat: no-repeat;
-   background-size: 1150px, 950px;
+   background-size: contain;
    background-position: center;
    background-attachment: fixed;
  }

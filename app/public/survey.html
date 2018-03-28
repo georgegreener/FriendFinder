@@ -95,7 +95,7 @@
         <label for="exampleSelect1">How did I get here?</label>
         <select class="form-control" id="question6">
           <option>-- Choose --</option>
-          <option value=1>How DID she get there?</option>
+          <option value=1>How DID you get there?</option>
           <option value=2>You blacked-out last night, so we took you home. Have some french toast.</option>
           <option value=3>Billions of years of evolution.</option>
           <option value=4>Took an Uber.</option>
@@ -167,7 +167,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <img id="matchPhoto" class="materialboxed" height="300" width="300" src="">
+          <img id="matchPhoto" class="materialboxed" height="350" width="400" src="">
           <div class="matchName">Name here</div>
           <hr class="my-4">
           <div>Boom! Got ya a new bestie! Ya'll have fun, and come back any time you need a new friend.</div>
@@ -189,9 +189,13 @@
   <!-- Javascript is run here -->
   <script type="text/javascript">
   
+    // When a user clicks the "Submit" button, it will execute the following function
     $("#submitSurvey").on("click", function(event) {
+      // This method prevents the window from automatically refreshing
       event.preventDefault();
 
+      // Here, we check to make sure the user didn't leave the "name" or "image" fields blank
+      // If either of them are blank, the code will break out of the function
       if ($("#friendName").val().trim() === "") {
         swal("Don't forget your name!");
         return false;
@@ -199,34 +203,46 @@
         swal("You kinda need a photo, too!");
         return false;
       }
+
+      // the newFriend object will house all the data the user submits
       var newFriend = {
         name: $("#friendName").val().trim(),
         photo: $("#friendPhoto").val().trim(),
         scores: []
       };
 
+      // Here, we iterate through each question and get the value of the answer the user chose
       for (var i = 1; i < 11; i++) {
+
         var score = $("#question" + i + "").val().trim();
+
+        // The Number function is used to parse the string values to integers
         var numScore = Number(score);
+
+        // If the parsed value is not a number, it means the user did not answer at least one question
+        // The user will be prompted to answer any remaining questions, and the code will break out of the function
         if (isNaN(numScore)) {
           swal("Be sure to answer all the questions, okay?");
           return false;
          }
+
+        // If all user input is validated, parsed scores will be pushed to the scores array in the newFriend object
         newFriend.scores.push(numScore);
+
       }
      
-      console.log(newFriend);
-
+      // After we have our newFriend object with all of the user data, we will post it to the server for processing
       $.post("/api/friends", newFriend, function(data) {
+        // If the post is successful, the callback function will use the response data to display a match in a modal
         if (data) {
           $("#modal").show();
           $("#matchPhoto").attr("src", data.photo);
           $(".matchName").html(data.name);
         }
       });
-
     });
 
+    // This will reload the page when the user dismisses the modal
     $("#sweet").on("click", function() {
       location.reload();
     });
