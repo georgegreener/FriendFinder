@@ -1,18 +1,18 @@
-// friends array contains starting profiles for user to match with
+// "friends" array contains starting profiles for user to match with
 var friends = [
   {
     name: "Sonic",
     photo: "http://iv1.lisimg.com/image/9701575/429full-my-profile.jpg",
     scores: [
+      2,
+      1,
+      4,
+      2,
+      3,
       1,
       1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
+      5,
+      2,
       1
     ]
   },
