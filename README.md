@@ -35,4 +35,8 @@
 
 # That's all, folks!
 
+  Here's the link to the deployed site!
+
+  https://boiling-cove-96455.herokuapp.com/
+
   Thanks for using FriendFinder!
